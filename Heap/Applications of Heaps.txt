@@ -1,4 +1,3 @@
-"""
 Heap Sort: Heap Sort uses Binary Heap to sort an array in O(nLogn) time.
 Priority Queue: Priority queues can be efficiently implemented using Binary Heap because it
                 supports insert(), delete() and extractmax(), decreaseKey() operations in O(log N) time. Binomial Heap and Fibonacci Heap are variations of Binary Heap.
@@ -6,5 +5,3 @@ Priority Queue: Priority queues can be efficiently implemented using Binary Heap
 Graph Algorithms: The priority queues are especially used in Graph Algorithms like Dijkstra's Shortest Path and Prim's Minimum Spanning Tree.
 Many problems can be efficiently solved using Heaps.
 See following for example. a) K'th Largest Element in an array. b) Sort an almost sorted array/ c) Merge K Sorted Arrays.
-
-"""
