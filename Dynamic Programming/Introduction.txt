@@ -3,4 +3,50 @@ Dynamic Programming is a commonlty used algorithmic technique used to optimize r
 . The core idea of this algorithmic technique is to store subproblems in memory and use it later without computing the subproblems again.
 . To solve DP problems, we first write a recursive solution in a way that there are overlapping subproblems in the recursion tree (the recursive function is called with the same parameters multiple times)
 . To make surre the recursive call only happens one we store results of the arthimetic call.
-. There are two ways to 
+. There are two ways to store the results, one is top down (or memoization) and other is bottom up (or tabulation).
+
+When to use Dynamic Programming (DP)?
+
+1. Optimal Substructure: Consider the problem of finding the minimum cost path in a weighted graph from a source node to a destination node. We can break this problem down into smaller subproblems:
+
+                        Find the minimum cost path from the source node to each intermediate node.
+                        Find the minimum cost path from each intermediate node to the destination node.
+
+2. Overlapping Subproblems: 
+    Like divide and conquor DP uses solutions to sub-problems. DP is used when the subproblems are later called again in the problem for example in the Fibonacci numbers problem we will encounter this but
+    in a case like binary search we can'tt use this approach as we know it wouldn't work.
+
+To solve Fibonacci numbers problem
+    we can use up down memoization or bottom top tabulation
+
+1. Overlapping Subproblems
+
+-- Memoization
+Using the memoization we initialize an array the stores initial values as NIL. Whenever we decide to find a solution of a subproblem
+we first look into the table and if it there we return it, else we compute and store it so it can be used later. So we go from top which is 5 to 1 keeping solutions
+in order to solve the question. (Root -> Leaf)
+Time Complexity: O(N) as we traverse the length of the tree and we keep solutions and for looking up an array is O(1) as we know its index.
+                 We have optimixed our solution as in a regular computation we would have had a complexity of O(2^n).
+
+Space Complexity: O(N) worst case scenario we have n numbers that means we will have to create an array of length n.
+
+-- Tabulation
+The tabulated program for a given problem builds a table in a bottom-up fashion and
+returns the last entry from the table. For example, for the same Fibonacci number, we first 
+calculate fib(0) then fib(1) then fib(2) then fib(3), and so on. So literally, we are building the solutions to subproblems bottom-up. 
+
+2. Optimal Structure
+The best (optimal) solution to a problem can be constructed from the best solutions to its smaller subproblems.
+Here you segment your problem in smaller segments and find their optimal solution, combine the solutions and then find the optimal solutiioin from there
+
+If a problem has this property, you can:
+
+Break the big problem into smaller problems.
+
+Solve each smaller problem optimally.
+
+Combine those optimal smaller solutions to get the overall optimal solution.
+
+So in conclusion Overlapping Subproblems you keep solutins for subproblems and use them when they are called again, while
+for Optimal Subproblems you segment subproblem to find optimal solutions from the options and later find the optimal 
+solution from the optimized subproblems.
