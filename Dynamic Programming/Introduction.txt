@@ -1,0 +1,6 @@
+Dynamic Programming is a commonlty used algorithmic technique used to optimize recursive solutions when same subproblems are called again.
+
+. The core idea of this algorithmic technique is to store subproblems in memory and use it later without computing the subproblems again.
+. To solve DP problems, we first write a recursive solution in a way that there are overlapping subproblems in the recursion tree (the recursive function is called with the same parameters multiple times)
+. To make surre the recursive call only happens one we store results of the arthimetic call.
+. There are two ways to 
